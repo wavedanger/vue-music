@@ -2,13 +2,13 @@
 
 #### 作品预览
 
-<img src="http://wavedanger.gitee.io/vue-music-online/images/index.gif" alt="主界面" width="250">
-<img src="http://wavedanger.gitee.io/vue-music-online/images/player.gif" alt="播放页面" width="250">
-<img src="http://wavedanger.gitee.io/vue-music-online/images/songlist.gif" alt="歌曲列表" width="250">
+<img src="http://wavedanger.gitee.io/vue-music-online/images/index.gif" alt="主界面" width="200">
+<img src="http://wavedanger.gitee.io/vue-music-online/images/player.gif" alt="播放页面" width="200">
+<img src="http://wavedanger.gitee.io/vue-music-online/images/songlist.gif" alt="歌曲列表" width="200">
 <br>
-<img src="http://wavedanger.gitee.io/vue-music-online/images/search.gif" alt="搜索页面" width="250">
-<img src="http://wavedanger.gitee.io/vue-music-online/images/user.gif" alt="个人中心" width="250">
-<img src="http://wavedanger.gitee.io/vue-music-online/images/disc.gif" alt="歌单详情" width="250">
+<img src="http://wavedanger.gitee.io/vue-music-online/images/search.gif" alt="搜索页面" width="200">
+<img src="http://wavedanger.gitee.io/vue-music-online/images/user.gif" alt="个人中心" width="200">
+<img src="http://wavedanger.gitee.io/vue-music-online/images/disc.gif" alt="歌单详情" width="200">
 <!-- ![主界面](http://wavedanger.gitee.io/vue-music-online/image/index.gif)
 ![播放页面](http://wavedanger.gitee.io/vue-music-online/image/player.gif)
 ![歌曲列表](http://wavedanger.gitee.io/vue-music-online/image/songlist.gif)
