@@ -7,10 +7,13 @@
 <img src="http://wavedanger.gitee.io/vue-music-online/images/player.gif" alt="播放页面" width="250">
 <img src="http://wavedanger.gitee.io/vue-music-online/images/songlist.gif" alt="歌曲列表" width="250">
 </div>
-<br>
-<img src="http://wavedanger.gitee.io/vue-music-online/images/search.gif" alt="搜索页面" width="250">
+<div style="clear:both"></div>
+<div style="float:left">
+  <img src="http://wavedanger.gitee.io/vue-music-online/images/search.gif" alt="搜索页面" width="250">
 <img src="http://wavedanger.gitee.io/vue-music-online/images/user.gif" alt="个人中心" width="250">
 <img src="http://wavedanger.gitee.io/vue-music-online/images/disc.gif" alt="歌单详情" width="250">
+</div>
+<div style="clear:both"></div>
 <!-- ![主界面](http://wavedanger.gitee.io/vue-music-online/image/index.gif)
 ![播放页面](http://wavedanger.gitee.io/vue-music-online/image/player.gif)
 ![歌曲列表](http://wavedanger.gitee.io/vue-music-online/image/songlist.gif)
