@@ -56,7 +56,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     },
     before(app) {
       // 定义getDiscList接口，回调传入两个参数，前端请求这个接口
-      app.get('/api/getDiscList', function(req, res) {
+      app.get('/api/getDiscList', function (req, res) {
         var url = 'https://c.y.qq.com/splcloud/fcgi-bin/fcg_get_diss_by_tag.fcg'
         axios
           .get(url, {
@@ -75,7 +75,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             console.log(e)
           })
       })
-      app.get('/api/music', function(req, res) {
+      app.get('/api/music', function (req, res) {
         // 获取vkey
         var url =
           'https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg'
@@ -101,19 +101,19 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         var url = 'https://u.y.qq.com/cgi-bin/musicu.fcg'
         // axios发送get请求，可以自己配置config
         axios.get(url, {
-            headers: {
-                referer: 'https://y.qq.com/',
-                host: 'u.y.qq.com'
-            },
-            //  params是即将与请求一起发送的url参数，无格式对象/URLSearchParams对象
-            params: req.query
+          headers: {
+            referer: 'https://y.qq.com/',
+            host: 'u.y.qq.com'
+          },
+          //  params是即将与请求一起发送的url参数，无格式对象/URLSearchParams对象
+          params: req.query
         }).then((response) => {
           res.json(response.data)
         }).catch((e) => {
-            console.log(e)
+          console.log(e)
         })
       })
-      app.get('/api/lyric', function(req, res) {
+      app.get('/api/lyric', function (req, res) {
         var url = 'https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg'
 
         axios
@@ -132,7 +132,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             console.log(e)
           })
       })
-      app.get('/api/getSongList', function(req, res) {
+      app.get('/api/getSongList', function (req, res) {
         var url =
           'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg'
         axios
@@ -144,13 +144,21 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             params: req.query
           })
           .then(response => {
-            res.json(response.data)
+            var ret = response.data
+            if (typeof ret === 'string') {
+              var reg = /^\w+\(({[^()]+})\)$/
+              var matches = ret.match(reg)
+              if (matches) {
+                ret = JSON.parse(matches[1])
+              }
+            }
+            res.json(ret)
           })
           .catch(e => {
             console.log(e)
           })
       })
-      app.get('/api/getSearch', function(req, res) {
+      app.get('/api/getSearch', function (req, res) {
         var url = 'https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp'
         axios
           .get(url, {
@@ -210,7 +218,7 @@ module.exports = new Promise((resolve, reject) => {
           compilationSuccessInfo: {
             messages: [
               `Your application is running here: http://${
-                devWebpackConfig.devServer.host
+              devWebpackConfig.devServer.host
               }:${port}`
             ]
           },

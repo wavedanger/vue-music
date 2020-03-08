@@ -38,6 +38,7 @@ export default {
         return
       }
       getSongList(this.disc.dissid).then((res) => {
+        console.log(res)
         if (res.code === ERR_OK) {
           console.log(res.cdlist[0].songlist)
           this.songs = this._normallizeSongs((res.cdlist[0].songlist))
@@ -77,11 +78,9 @@ export default {
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-.slide-enter-active, .slide-leave-active {
-  transition: all 0.3s;
-}
+.slide-enter-active, .slide-leave-active
+  transition: all 0.3s
 
-.slide-enter, .slide-leave-to {
-  transform: translate3d(100%, 0, 0);
-}
+.slide-enter, .slide-leave-to
+  transform: translate3d(100%, 0, 0)
 </style>
